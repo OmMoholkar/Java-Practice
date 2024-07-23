@@ -29,5 +29,20 @@ public class StringPractice{
             result = names[i].replace('e', 'i');
             System.out.println(result);
         }
+
+        //Username from email
+        System.out.println("Enter your email address: ");
+        String email = sc.next();
+        String userName = "";
+
+        for(int i=0; i<email.length(); i++) {
+            if(email.charAt(i) == '@') {
+                break;
+            } else {
+                userName += email.charAt(i);
+            }
+        }
+        System.out.println("Username: "+userName);
+
     }
 }
