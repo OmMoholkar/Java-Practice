@@ -23,6 +23,11 @@ public class StringPractice{
         }
         System.out.println("The total characters is: "+totalLength);
 
-        
+        //replace e with i
+        String result = "";
+        for(int i=0;i<size;i++){
+            result = names[i].replace('e', 'i');
+            System.out.println(result);
+        }
     }
 }
