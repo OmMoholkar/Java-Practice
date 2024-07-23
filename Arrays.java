@@ -54,11 +54,6 @@ public class Arrays{
         System.out.println("Names: ");
         for(int i=0;i<size;i++){
             System.out.println(names[i]);
-        }
-
-
-
-
-        
+        }        
     }
 }
