@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class BubbleSort {
+class SelectionSort {
     public static void main(String[] args) {
         System.out.println("Enter array size: ");
         Scanner sc = new Scanner(System.in);
@@ -18,16 +18,19 @@ class BubbleSort {
         }
         System.out.println();
 
-        //Ascending order
+        //Ascending Order array
         for(int i=0;i<size-1;i++){
-            for(int j=0;j<size-1-i;j++){
-                if(arr[j]>arr[j+1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+            int smallest = i;
+            for(int j=i+1;j<size;j++){
+                if(arr[smallest]>arr[j]){
+                    smallest = j;
                 }
+                int temp = arr[smallest];
+                arr[smallest] = arr[i];
+                arr[i] = temp;
             }
         }
+        
 
         System.out.println("Ascending Order: ");
         for(int i=0;i<size;i++){
@@ -35,14 +38,16 @@ class BubbleSort {
         }
         System.out.println();
 
-        //Descending order
+        //Descending Order array
         for(int i=0;i<size-1;i++){
-            for(int j=0;j<size-1-i;j++){
-                if(arr[j]<arr[j+1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+            int smallest = i;
+            for(int j=i+1;j<size;j++){
+                if(arr[j]>arr[smallest]){
+                    smallest = j;
                 }
+                int temp = arr[smallest];
+                arr[smallest] = arr[i];
+                arr[i] = temp;
             }
         }
 
